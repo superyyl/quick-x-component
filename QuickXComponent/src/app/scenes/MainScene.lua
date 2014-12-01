@@ -4,6 +4,7 @@ local MainScene = class("MainScene", function()
 end)
 
 local TimerLabel = require("reign.component.TimerLabel")
+local TypingLabel = require("reign.component.TypingLabel")
 
 function MainScene:ctor()
     ---[[ TimerLabel
@@ -19,6 +20,18 @@ function MainScene:ctor()
     timerLabel:align(display.LEFT_TOP,50,display.height - 50):addTo(self)
     ---]]
     
+    ---[[
+    local typingLabel = TypingLabel.new({
+        text = "这是一个打字机效果,\n支持中英数组合,\n数字123456英文abcdefg"
+    })
+    
+    typingLabel:addEventListener(TypingLabel.ON_FINISH_TYPING,function(event)
+        print("打字机结束")
+    end)
+    
+    typingLabel:align(display.LEFT_TOP,50,display.height - 100):addTo(self)
+    
+    ---]]
     
 end
 
