@@ -6,6 +6,7 @@ end)
 local TimerLabel = require("reign.component.TimerLabel")
 
 function MainScene:ctor()
+    ---[[ TimerLabel
     local timerLabel = TimerLabel.new({
         time = 60000,
         format = "TimerLabel演示:@M:@S"
@@ -16,7 +17,9 @@ function MainScene:ctor()
     end)
 
     timerLabel:align(display.LEFT_TOP,50,display.height - 50):addTo(self)
-
+    ---]]
+    
+    
 end
 
 function MainScene:onEnter()
