@@ -46,3 +46,6 @@
     self:addChild(label)
 这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)
 我只是把他揉在一个文件里并引入quick,只是方便使用罢了,没做什么贡献
+
+##效果图
+![效果图](snapshot/1.png)
