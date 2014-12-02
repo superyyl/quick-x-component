@@ -643,7 +643,7 @@ end
 -- 屏蔽了使用图集和直接使用碎图创建精灵的不同
 function RichLabel:getSprite(filename)
     local spriteFrameCache = cc.SpriteFrameCache:getInstance()
-    local spriteFrame = spriteFrameCache:getSpriteFrameByName(filename)
+    local spriteFrame = spriteFrameCache:getSpriteFrame(filename)
 
     if spriteFrame then
         return cc.Sprite:createWithSpriteFrame(spriteFrame)

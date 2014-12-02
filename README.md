@@ -34,14 +34,14 @@
 
 ##RichLabel
     local label = RichLabel.new({
-        text = "<div fontcolor=#ff0000>hello</div><div fontcolor=#00ff00>hello</div><div fontsize=12>你</div><div fontSize=26 fontcolor=#ff00bb>好</div>ok",
+        text = "<div fontcolor=#ff0000>hello</div><img src=res/pika.png scale=0.05 /><div fontcolor=#00ff00>hello</div><div fontsize=12>你</div><div fontSize=26 fontcolor=#ff00bb>好</div>ok",
         size = 20,
         color = cc.c3b(255, 255, 255),
         maxWidth=90,
         lineSpace=0,
         charSpace=0,
     })
-    label:align(display.LEFT_TOP,50,display.height - 250)
+    label:align(display.LEFT_TOP,50,display.height - 200)
     label:playAnimation()
     self:addChild(label)
 这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)
