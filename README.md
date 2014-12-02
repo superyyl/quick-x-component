@@ -30,3 +30,19 @@
 参数和display.newTTFLabel一样
 当点击改文字区块时,会一下显示完所有的文字
 显示完文字后悔触发TypingLabel.ON_FINISH_TYPING
+
+
+##RichLabel
+    local label = RichLabel.new {
+        fontSize = 20,
+        fontColor = cc.c3b(255, 255, 255),
+        maxWidth=200,
+        lineSpace=0,
+        charSpace=0,
+    }
+    label:setString("<div fontcolor=#ff0000>hello</div><div fontcolor=#00ff00>hello</div><div fontsize=12>你</div><div fontSize=26 fontcolor=#ff00bb>好</div>ok")
+    label:align(display.LEFT_TOP,50,display.height - 250)
+    label:playAnimation()
+    self:addChild(label)
+这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)
+我只是把他揉在一个文件里并引入quick,只是方便使用罢了,没做什么贡献
