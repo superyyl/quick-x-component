@@ -35,8 +35,8 @@
 ##RichLabel
     local label = RichLabel.new({
         text = "<div fontcolor=#ff0000>hello</div><div fontcolor=#00ff00>hello</div><div fontsize=12>你</div><div fontSize=26 fontcolor=#ff00bb>好</div>ok",
-        fontSize = 20,
-        fontColor = cc.c3b(255, 255, 255),
+        size = 20,
+        color = cc.c3b(255, 255, 255),
         maxWidth=90,
         lineSpace=0,
         charSpace=0,
