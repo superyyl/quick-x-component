@@ -12,8 +12,8 @@
     end)
 
     timerLabel:align(display.LEFT_TOP,50,display.height - 50):addTo(self)
-除了text外,display.newTTFLabel里的所有参数都有效
-新增了time参数(单位毫秒),format参数(支持H M S),triggerTime参数(触发事件,不传时为0)
+除了text外,display.newTTFLabel里的所有参数都有效  
+新增了time参数(单位毫秒),format参数(支持H M S),triggerTime参数(触发事件,不传时为0)  
 倒计时结束会触发TimerLabel.ON_COUNT_DOWN
 
 
@@ -27,8 +27,8 @@
     end)
     
     typingLabel:align(display.LEFT_TOP,50,display.height - 100):addTo(self)
-参数和display.newTTFLabel一样
-当点击改文字区块时,会一下显示完所有的文字
+参数和display.newTTFLabel一样  
+当点击改文字区块时,会一下显示完所有的文字  
 显示完文字后悔触发TypingLabel.ON_FINISH_TYPING
 
 
@@ -44,7 +44,7 @@
     label:align(display.LEFT_TOP,50,display.height - 200)
     label:playAnimation()
     self:addChild(label)
-这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)
+这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)  
 我只是把他揉在一个文件里并引入quick,只是方便使用罢了,没做什么贡献
 
 ##效果图
