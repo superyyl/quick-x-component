@@ -40,6 +40,10 @@ function RichLabel:ctor(params)
     -- 允许setColor和setOpacity生效
     self:setCascadeOpacityEnabled(true)
     self:setCascadeColorEnabled(true)
+    
+    if params.text then
+        self:setString(params.text)
+    end
 end
 
 function RichLabel:setString(text)
