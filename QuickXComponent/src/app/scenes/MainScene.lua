@@ -6,6 +6,7 @@ end)
 local TimerLabel = require("reign.component.TimerLabel")
 local TypingLabel = require("reign.component.TypingLabel")
 local RichLabel = require("reign.component.RichLabel")
+local LazyLoader = require("reign.component.LazyLoader")
 
 function MainScene:ctor()
     ---[[ TimerLabel
@@ -47,6 +48,29 @@ function MainScene:ctor()
     label:playAnimation()
     self:addChild(label)
     
+    ---]]
+
+    ---[[LazyLoader
+    local lazy = LazyLoader.new()
+    local lazyLabel = cc.ui.UILabel.new({
+        text = "aaaa",
+        color = cc.c3b(255, 255, 255),
+    })
+    lazyLabel:align(display.LEFT_TOP,50,display.height - 270)
+    self:addChild(lazyLabel)
+    local itemList = {}
+    for i=1,10000 do
+        itemList[i] = "No."..i
+    end
+    lazy:setItemList(itemList)
+    lazy:onFunc(function(event)
+        lazyLabel:setString(event.item)
+    end)
+    lazy:onCallback(function(event)
+        lazyLabel:setString("Finish!!!")
+    end)
+    lazy:start()
+
     ---]]
     
 end
