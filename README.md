@@ -47,5 +47,29 @@
 这个参考了[RichLabel](https://github.com/Luweimy/RichLabel)  
 我只是把他揉在一个文件里并引入quick,只是方便使用罢了,没做什么贡献
 
+
+##LazyLoader
+    local lazy = LazyLoader.new()
+    local lazyLabel = cc.ui.UILabel.new({
+        text = "aaaa",
+        color = cc.c3b(255, 255, 255),
+    })
+    lazyLabel:align(display.LEFT_TOP,50,display.height - 270)
+    self:addChild(lazyLabel)
+    local itemList = {}
+    for i=1,10000 do
+        itemList[i] = "No."..i
+    end
+    lazy:setItemList(itemList)
+    lazy:onFunc(function(event)
+        lazyLabel:setString(event.item)
+    end)
+    lazy:onCallback(function(event)
+        lazyLabel:setString("Finish!!!")
+    end)
+    lazy:start()
+这个非常适合list逐帧加载,可以实现loading条,或者背包,避免绘画线程锁死导致的降帧
+
+
 ##效果图
 ![效果图](snapshot/1.png)
